@@ -1,0 +1,22 @@
+.projectsSection {
+
+    li {
+
+        &:nth-child(even) {
+            text-align: right;
+        }
+
+    }
+
+    .individualProject {
+        display: flex;
+        width: 100%;
+
+        
+        .projectDescription {
+            width: 50%;
+        }
+
+    }
+
+}

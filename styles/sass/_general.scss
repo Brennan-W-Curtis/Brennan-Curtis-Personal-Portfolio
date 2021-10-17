@@ -35,8 +35,17 @@ html {
 }
 
 // General Styles
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+button {
+    font-family: $primaryFont;
+}
 
 // Code Debugging
-// * {
-//     border: 1px solid red;
-// }
+* {
+    border: 1px solid red;
+}

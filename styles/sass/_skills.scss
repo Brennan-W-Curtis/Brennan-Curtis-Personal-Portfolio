@@ -1,0 +1,42 @@
+.skillsSection {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    h2 {
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: .5rem .5rem;
+            width: calc(100% / 10);
+            
+            .imageContainer {
+                display: flex;
+                min-width: 3rem;
+                max-width: 3rem;
+                min-height: 3rem;
+                max-height: 3rem;
+            }
+    
+        }
+        
+        p {
+            width: 100%;
+            text-align: center;
+            font-size: .7rem;
+        }
+
+    }
+
+}

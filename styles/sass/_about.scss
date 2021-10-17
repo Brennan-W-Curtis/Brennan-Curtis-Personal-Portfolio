@@ -1,0 +1,17 @@
+.aboutSection {
+    height: 100vh;
+
+    .aboutContent {
+        display: flex;
+
+        aside {
+            width: 25%;
+        }
+
+        article {
+            width: 75%;
+        }
+
+    }
+
+}

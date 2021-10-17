@@ -1,0 +1,43 @@
+.contactSection {
+    height: 100vh;
+
+    .contactOptions {
+        display: flex;      
+    }
+
+    .contactForm {
+        width: 50%;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        li {
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+        }
+
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input[type="text"] {
+            margin: .5rem 0;
+        }
+
+        textarea {
+            resize: none;
+            height: 5rem;
+        }
+
+        button {
+            border: none;
+        }
+
+    }
+
+}

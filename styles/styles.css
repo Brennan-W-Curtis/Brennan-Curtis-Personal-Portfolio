@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -259,6 +260,196 @@ html {
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  border: 1px solid red;
+}
+
+header {
+  height: 100vh;
+}
+header .headerNavigation {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+}
+header ul li {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header ul li a {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+header ul li:hover, header ul li:focus-within {
+  color: #FA472A;
+}
+
+.aboutSection {
+  height: 100vh;
+}
+.aboutSection .aboutContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutSection .aboutContent aside {
+  width: 25%;
+}
+.aboutSection .aboutContent article {
+  width: 75%;
+}
+
+.skillsSection {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.skillsSection h2 {
+  width: 100%;
+}
+.skillsSection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.skillsSection ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0.5rem 0.5rem;
+  width: calc(100% / 10);
+}
+.skillsSection ul li .imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 3rem;
+  max-width: 3rem;
+  min-height: 3rem;
+  max-height: 3rem;
+}
+.skillsSection ul p {
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.projectsSection li:nth-child(even) {
+  text-align: right;
+}
+.projectsSection .individualProject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.projectsSection .individualProject .projectDescription {
+  width: 50%;
+}
+
+.contactSection {
+  height: 100vh;
+}
+.contactSection .contactOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactSection .contactForm {
+  width: 50%;
+}
+.contactSection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactSection ul li {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+.contactSection form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactSection form input[type=text] {
+  margin: 0.5rem 0;
+}
+.contactSection form textarea {
+  resize: none;
+  height: 5rem;
+}
+.contactSection form button {
+  border: none;
+}
+
+footer {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer p {
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /* Portrait tablet and small desktops */
