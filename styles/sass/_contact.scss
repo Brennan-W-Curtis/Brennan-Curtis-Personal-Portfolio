@@ -1,24 +1,14 @@
 .contactSection {
-    height: 100vh;
+    height: 50vh;
 
-    .contactOptions {
-        display: flex;      
+    h2 {
+        font-size: 3rem;
+        letter-spacing: -.15rem;
+        width: 100%;
     }
 
     .contactForm {
         width: 50%;
-    }
-
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-
-        li {
-            min-width: 1.5rem;
-            min-height: 1.5rem;
-        }
-
     }
     
     form {
@@ -36,6 +26,15 @@
 
         button {
             border: none;
+            background-color: white;
+            transition: all .5s;
+
+            &:hover,
+            &:focus {
+                background-color: black;
+                color: white;
+            }
+
         }
 
     }

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://use.typekit.net/rhu3qmo.css");
+@import url("https://use.typekit.net/rhu3qmo.css");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -258,26 +259,34 @@ html {
 
 .wrapper {
   width: 90%;
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
-h1,
-h2,
 h3,
 h4,
 p,
 a,
 button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "futura-pt", sans-serif;
 }
 
-* {
-  border: 1px solid red;
+h1,
+h2 {
+  font-family: "nimbus-roman", serif;
 }
 
 header {
   height: 100vh;
+}
+header .wrapper {
+  position: relative;
+}
+header .wrapper::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid black;
+  width: 100%;
 }
 header .headerNavigation {
   height: 10vh;
@@ -290,6 +299,24 @@ header .headerNavigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+header .headerNavigation::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid black;
+  width: 100%;
+  top: 4.5rem;
+}
+header .brandLogo {
+  font-family: "nimbus-roman", serif;
+  font-size: 2rem;
+  letter-spacing: -0.05rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header .brandLogo:hover, header .brandLogo:focus {
+  color: #FA472A;
 }
 header ul {
   display: -webkit-box;
@@ -312,9 +339,48 @@ header ul li a {
 header ul li:hover, header ul li:focus-within {
   color: #FA472A;
 }
+header .headerContent {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .headerContent .headerHeadlines {
+  width: 100%;
+}
+header .headerContent .headerHeadlines span {
+  color: #FA472A;
+}
+header .headerContent .headerHeadlines h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.15rem;
+}
+header .headerContent .headerHeadlines h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+}
 
 .aboutSection {
   height: 100vh;
+  position: relative;
+}
+.aboutSection::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.aboutSection h2 {
+  font-size: 3rem;
+  letter-spacing: -0.15rem;
+  width: 100%;
 }
 .aboutSection .aboutContent {
   display: -webkit-box;
@@ -327,9 +393,25 @@ header ul li:hover, header ul li:focus-within {
 .aboutSection .aboutContent article {
   width: 75%;
 }
+.aboutSection .imageBackground {
+  background-color: #F3F3F3;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 12.5rem;
+  height: 12.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.aboutSection .imageBackground .imageContainer {
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  left: -6rem;
+  top: -1.5rem;
+}
 
 .skillsSection {
-  height: 100vh;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,9 +420,14 @@ header ul li:hover, header ul li:focus-within {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
 }
 .skillsSection h2 {
+  font-size: 3rem;
+  letter-spacing: -0.15rem;
   width: 100%;
+  text-align: center;
+  margin: 1rem;
 }
 .skillsSection ul {
   display: -webkit-box;
@@ -364,8 +451,15 @@ header ul li:hover, header ul li:focus-within {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #F3F3F3;
   margin: 0.5rem 0.5rem;
+  padding: 0.5rem;
+  min-width: 115px;
   width: calc(100% / 10);
+  border-bottom: 1px solid black;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .skillsSection ul li .imageContainer {
   display: -webkit-box;
@@ -376,12 +470,20 @@ header ul li:hover, header ul li:focus-within {
   min-height: 3rem;
   max-height: 3rem;
 }
+.skillsSection ul li:hover, .skillsSection ul li:focus-within {
+  color: #FA472A;
+}
 .skillsSection ul p {
   width: 100%;
   text-align: center;
   font-size: 0.7rem;
 }
 
+.projectsSection h2 {
+  font-size: 3rem;
+  letter-spacing: -0.15rem;
+  width: 100%;
+}
 .projectsSection li:nth-child(even) {
   text-align: right;
 }
@@ -391,35 +493,41 @@ header ul li:hover, header ul li:focus-within {
   display: flex;
   width: 100%;
 }
-.projectsSection .individualProject .projectDescription {
+.projectsSection .individualProject .projectDesktop {
+  position: relative;
+}
+.projectsSection .individualProject .iconContainer {
+  position: relative;
+  min-width: 15rem;
+}
+.projectsSection .individualProject .logoContainer {
+  position: absolute;
   width: 50%;
+  left: 4rem;
+  top: 0;
+}
+.projectsSection .projectDescription {
+  width: 50%;
+}
+.projectsSection .projectDescription h3 {
+  font-family: "nimbus-roman", serif;
+}
+.projectsSection .projectDescription h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
 }
 
 .contactSection {
-  height: 100vh;
+  height: 50vh;
 }
-.contactSection .contactOptions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.contactSection h2 {
+  font-size: 3rem;
+  letter-spacing: -0.15rem;
+  width: 100%;
 }
 .contactSection .contactForm {
   width: 50%;
-}
-.contactSection ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.contactSection ul li {
-  min-width: 1.5rem;
-  min-height: 1.5rem;
 }
 .contactSection form {
   display: -webkit-box;
@@ -439,6 +547,13 @@ header ul li:hover, header ul li:focus-within {
 }
 .contactSection form button {
   border: none;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.contactSection form button:hover, .contactSection form button:focus {
+  background-color: black;
+  color: white;
 }
 
 footer {
@@ -447,9 +562,50 @@ footer {
   display: -ms-flexbox;
   display: flex;
 }
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+footer .wrapper::before {
+  content: "";
+  border-bottom: 1px solid black;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
 footer p {
   text-align: center;
   font-size: 0.8rem;
+}
+footer .footerNavigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+}
+footer .footerNavigation .contactSocials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 25%;
+}
+footer .footerNavigation li {
+  min-width: 1rem;
+  min-height: 1rem;
+}
+footer .footerNavigation li:hover, footer .footerNavigation li:focus-within {
+  color: #FA472A;
 }
 
 /* Portrait tablet and small desktops */

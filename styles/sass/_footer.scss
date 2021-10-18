@@ -1,10 +1,49 @@
 footer {
     height: 10vh;
     display: flex;
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            content: "";
+            border-bottom: 1px solid black;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+    }
 
     p {
         text-align: center;
         font-size: .8rem;
+    }
+
+    .footerNavigation {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+       
+        .contactSocials {
+            display: flex;
+            justify-content: space-between;
+            width: 25%;    
+        }
+
+        li {
+            min-width: 1rem;
+            min-height: 1rem;
+
+            &:hover,
+            &:focus-within {
+                color: $primaryColour;
+            }
+
+        }
+
     }
     
 }

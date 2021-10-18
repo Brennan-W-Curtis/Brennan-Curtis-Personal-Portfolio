@@ -1,5 +1,19 @@
 .aboutSection {
     height: 100vh;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid black;
+        width: 100%;
+    }
+   
+    h2 {
+        font-size: 3rem;
+        letter-spacing: -.15rem;
+        width: 100%;
+    }
 
     .aboutContent {
         display: flex;
@@ -10,6 +24,25 @@
 
         article {
             width: 75%;
+        }
+
+    }
+
+    .imageBackground {
+        background-color: $backgroundColour;
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 12.5rem;
+        height: 12.5rem;
+        overflow: hidden;
+        position: relative;
+
+        .imageContainer {
+            width: 25rem;
+            height: 25rem;
+            position: absolute;
+            left: -6rem;
+            top: -1.5rem;
         }
 
     }

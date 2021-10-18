@@ -1,11 +1,47 @@
+// Header Styling
+
 header {
     height: 100vh;
+    
+    .wrapper {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid black;
+            width: 100%;
+        }
+
+    }
     
     .headerNavigation {
         height: 10vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid black;
+            width: 100%;
+            top: 4.5rem;
+        }
+
+    }
+
+    .brandLogo {
+        font-family: $secondaryFont;
+        font-size: 2rem;
+        letter-spacing: -.05rem;
+        transition: all .5s;
+
+        &:hover,
+        &:focus {
+            color: $primaryColour;
+        }
     }
     
     ul {
@@ -27,6 +63,34 @@ header {
                 color: $primaryColour;
             }
             
+        }
+
+    }
+
+    .headerContent {
+        height: 90vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .headerHeadlines {
+            width: 100%;
+
+            span {
+                color: $primaryColour;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+                letter-spacing: -.15rem;
+            }
+    
+            h3 {
+                font-size: .9rem;
+                font-weight: 400;
+                letter-spacing: .15rem;
+            }
+
         }
 
     }

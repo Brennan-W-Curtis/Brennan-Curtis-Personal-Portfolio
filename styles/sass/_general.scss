@@ -30,13 +30,11 @@ html {
 
 .wrapper { 
     width: 90%; 
-    max-width: 1080px; 
+    max-width: 1280px; 
     margin: 0 auto; 
 }
 
 // General Styles
-h1,
-h2,
 h3,
 h4,
 p,
@@ -45,7 +43,12 @@ button {
     font-family: $primaryFont;
 }
 
-// Code Debugging
-* {
-    border: 1px solid red;
+h1,
+h2 {
+    font-family: $secondaryFont;
 }
+
+// Code Debugging
+// * {
+//     border: 1px solid red;
+// }
