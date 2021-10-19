@@ -278,6 +278,10 @@ h2 {
 
 header {
   height: 100vh;
+  background: url("../../assets/renders/infiniteRoom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 header .wrapper {
   position: relative;
@@ -325,6 +329,7 @@ header ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
   width: 40%;
 }
 header ul li {
@@ -334,7 +339,7 @@ header ul li {
 header ul li a {
   text-transform: uppercase;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 header ul li:hover, header ul li:focus-within {
   color: #FA472A;
@@ -350,6 +355,7 @@ header .headerContent {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 header .headerContent .headerHeadlines {
   width: 100%;
@@ -366,9 +372,17 @@ header .headerContent .headerHeadlines h3 {
   font-weight: 400;
   letter-spacing: 0.15rem;
 }
+header .headerContent .imageContainer {
+  width: 7.5%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
 
 .aboutSection {
-  height: 100vh;
+  height: 55vh;
   position: relative;
 }
 .aboutSection::after {
@@ -387,11 +401,23 @@ header .headerContent .headerHeadlines h3 {
   display: -ms-flexbox;
   display: flex;
 }
-.aboutSection .aboutContent aside {
-  width: 25%;
+.aboutSection .aboutContent .articleText {
+  width: 80%;
 }
-.aboutSection .aboutContent article {
-  width: 75%;
+.aboutSection .aboutContent .articleText h3 {
+  font-family: "nimbus-roman", serif;
+}
+.aboutSection .aboutContent .articleText span {
+  color: #FA472A;
+}
+.aboutSection .aboutContent .articleText h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  margin: 0;
+}
+.aboutSection .aboutContent .articleText p {
+  margin: 0.5rem 0;
 }
 .aboutSection .imageBackground {
   background-color: #F3F3F3;
@@ -411,7 +437,7 @@ header .headerContent .headerHeadlines h3 {
 }
 
 .skillsSection {
-  height: 50vh;
+  min-height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,7 +451,7 @@ header .headerContent .headerHeadlines h3 {
 .skillsSection h2 {
   font-size: 3rem;
   letter-spacing: -0.15rem;
-  width: 100%;
+  width: calc(100% - 2rem);
   text-align: center;
   margin: 1rem;
 }
@@ -472,6 +498,8 @@ header .headerContent .headerHeadlines h3 {
 }
 .skillsSection ul li:hover, .skillsSection ul li:focus-within {
   color: #FA472A;
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 .skillsSection ul p {
   width: 100%;
@@ -482,52 +510,135 @@ header .headerContent .headerHeadlines h3 {
 .projectsSection h2 {
   font-size: 3rem;
   letter-spacing: -0.15rem;
-  width: 100%;
-}
-.projectsSection li:nth-child(even) {
-  text-align: right;
+  width: calc(100% - 2rem);
+  text-align: center;
+  margin: 1rem;
 }
 .projectsSection .individualProject {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-}
-.projectsSection .individualProject .projectDesktop {
   position: relative;
 }
-.projectsSection .individualProject .iconContainer {
-  position: relative;
-  min-width: 15rem;
-}
-.projectsSection .individualProject .logoContainer {
-  position: absolute;
-  width: 50%;
-  left: 4rem;
-  top: 0;
+.projectsSection .individualProject .imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .projectsSection .projectDescription {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .projectsSection .projectDescription h3 {
+  width: 100%;
   font-family: "nimbus-roman", serif;
 }
 .projectsSection .projectDescription h4 {
+  width: 100%;
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.05rem;
 }
+.projectsSection .projectDescription p {
+  width: 100%;
+}
+.projectsSection .projectLinks {
+  width: 16.5%;
+}
+.projectsSection .projectLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.projectsSection .projectLinks a {
+  display: block;
+  background-color: #F3F3F3;
+  padding: 0.5rem 1rem;
+  max-width: 4rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.projectsSection .projectLinks a:hover, .projectsSection .projectLinks a:focus-within {
+  color: #FA472A;
+  background-color: black;
+}
 
 .contactSection {
-  height: 50vh;
+  height: 55vh;
 }
-.contactSection h2 {
+.contactSection .contactHeadline h2 {
   font-size: 3rem;
   letter-spacing: -0.15rem;
   width: 100%;
 }
-.contactSection .contactForm {
+.contactSection .contactHeadline .actionText {
   width: 50%;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+.contactSection .contactContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contactSection .contactContent .contactSocials {
+  width: 50%;
+  position: relative;
+  top: 2rem;
+}
+.contactSection .contactContent .contactSocials h3 {
+  font-family: "futura-pt", sans-serif;
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  margin: 1rem 0;
+}
+.contactSection .contactContent .calendlyLink {
+  background-color: #F3F3F3;
+  width: 100%;
+  padding: 0.5rem 3.25rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.contactSection .contactContent .calendlyLink:hover, .contactSection .contactContent .calendlyLink:focus {
+  color: #FA472A;
+  background-color: black;
+}
+.contactSection .contactContent .contactForm {
+  width: 50%;
+}
+.contactSection .socialsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  min-width: 10rem;
+}
+.contactSection .socialsList li {
+  min-width: 1rem;
+  min-height: 1rem;
 }
 .contactSection form {
   display: -webkit-box;
@@ -538,22 +649,41 @@ header .headerContent .headerHeadlines h3 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.contactSection form .formInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
 .contactSection form input[type=text] {
   margin: 0.5rem 0;
+  width: calc(50% - .5rem);
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: "futura-pt", sans-serif;
 }
 .contactSection form textarea {
   resize: none;
-  height: 5rem;
+  height: 10rem;
+  font-family: "futura-pt", sans-serif;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  margin: 1rem 0 0 0;
+  padding: 0.5rem;
 }
 .contactSection form button {
   border: none;
-  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  background-color: #F3F3F3;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .contactSection form button:hover, .contactSection form button:focus {
   background-color: black;
-  color: white;
+  color: #F3F3F3;
 }
 
 footer {
@@ -569,6 +699,9 @@ footer .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 footer .wrapper::before {
@@ -581,31 +714,6 @@ footer .wrapper::before {
 footer p {
   text-align: center;
   font-size: 0.8rem;
-}
-footer .footerNavigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 50%;
-}
-footer .footerNavigation .contactSocials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 25%;
-}
-footer .footerNavigation li {
-  min-width: 1rem;
-  min-height: 1rem;
-}
-footer .footerNavigation li:hover, footer .footerNavigation li:focus-within {
-  color: #FA472A;
 }
 
 /* Portrait tablet and small desktops */

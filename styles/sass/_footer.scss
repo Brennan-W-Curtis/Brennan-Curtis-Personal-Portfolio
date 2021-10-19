@@ -5,6 +5,7 @@ footer {
     .wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         position: relative;
 
         &::before {
@@ -20,30 +21,6 @@ footer {
     p {
         text-align: center;
         font-size: .8rem;
-    }
-
-    .footerNavigation {
-        display: flex;
-        justify-content: flex-end;
-        width: 50%;
-       
-        .contactSocials {
-            display: flex;
-            justify-content: space-between;
-            width: 25%;    
-        }
-
-        li {
-            min-width: 1rem;
-            min-height: 1rem;
-
-            &:hover,
-            &:focus-within {
-                color: $primaryColour;
-            }
-
-        }
-
     }
     
 }

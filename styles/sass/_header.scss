@@ -1,7 +1,9 @@
-// Header Styling
-
 header {
     height: 100vh;
+    background: url("../../assets/renders/infiniteRoom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
     
     .wrapper {
         position: relative;
@@ -47,6 +49,7 @@ header {
     ul {
         display: flex;
         justify-content: space-between;
+        position: relative;
         width: 40%;
 
         li {
@@ -55,7 +58,7 @@ header {
             a {
                 text-transform: uppercase;
                 font-size: .8rem;
-                font-weight: 700;
+                font-weight: 500;
             }
 
             &:hover,
@@ -72,6 +75,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         .headerHeadlines {
             width: 100%;
@@ -91,6 +95,14 @@ header {
                 letter-spacing: .15rem;
             }
 
+        }
+
+        .imageContainer {
+            width: 7.5%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: rotate(90deg);
         }
 
     }

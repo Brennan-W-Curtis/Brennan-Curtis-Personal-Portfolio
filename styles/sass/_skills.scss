@@ -1,5 +1,5 @@
 .skillsSection {
-    height: 50vh;
+    min-height: 60vh;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -8,7 +8,7 @@
     h2 {
         font-size: 3rem;
         letter-spacing: -.15rem;
-        width: 100%;
+        width: calc(100% - 2rem);
         text-align: center;
         margin: 1rem;
     }
@@ -43,6 +43,7 @@
             &:hover,
             &:focus-within {
                 color: $primaryColour;
+                transform: translateY(-.5rem);
             }
     
         }

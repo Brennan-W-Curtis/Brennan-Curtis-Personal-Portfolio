@@ -1,5 +1,5 @@
 .aboutSection {
-    height: 100vh;
+    height: 55vh;
     position: relative;
 
     &::after {
@@ -18,12 +18,28 @@
     .aboutContent {
         display: flex;
 
-        aside {
-            width: 25%;
-        }
+        .articleText {
+            width: 80%;
+    
+            h3 {
+                font-family: $secondaryFont;
+            }
+    
+            span {
+                color: $primaryColour;
+            }
+    
+            h4 {
+                font-size: .9rem;
+                font-weight: 400;
+                letter-spacing: .05rem;
+                margin: 0;
+            }
 
-        article {
-            width: 75%;
+            p {
+                margin: .5rem 0;
+            }
+
         }
 
     }
