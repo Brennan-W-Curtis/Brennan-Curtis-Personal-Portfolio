@@ -43,7 +43,27 @@ header {
         &:hover,
         &:focus {
             color: $primaryColour;
+            
+            &::after {
+                content: ".";
+                color: black;
+                font-family: $primaryFont;
+                position: relative;
+                right: .7rem;
+                bottom: .57rem;
+                transition: all .5s;
+            }
+
         }
+
+        &::after {
+            content: ".";
+            color: $primaryColour;
+            position: relative;
+            right: .75rem;
+            bottom: .6rem;
+        }
+
     }
     
     ul {
@@ -103,6 +123,18 @@ header {
             right: 0;
             bottom: 0;
             transform: rotate(90deg);
+        }
+
+    }
+
+    .sectionLinks {
+        position: fixed;
+        right: 1rem;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
     }

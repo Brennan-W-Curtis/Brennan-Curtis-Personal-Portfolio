@@ -1,5 +1,13 @@
 .contactSection {
     height: 55vh;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid black;
+        width: 100%;
+    }
 
     .contactHeadline {
 
@@ -44,7 +52,7 @@
             
             &:hover,
             &:focus {
-                color: $primaryColour;
+                color: white;
                 background-color: black;
             }
 
@@ -63,9 +71,21 @@
         min-width: 10rem;
 
         li {
-            min-width: 1rem;
-            min-height: 1rem;
+            max-width: 1rem;
+            max-height: 1rem;    
         }
+
+        .svgIcon {
+            fill: black;
+            max-width: 100%;
+            transition: all .5s;
+
+            &:hover,
+            &:focus {
+                fill: $primaryColour;
+            }
+
+        } 
 
     }
     
@@ -105,8 +125,8 @@
 
             &:hover,
             &:focus {
+                color: white;
                 background-color: black;
-                color: $backgroundColour;
             }
 
         }

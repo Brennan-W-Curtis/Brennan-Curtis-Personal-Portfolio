@@ -5,6 +5,13 @@
     align-items: flex-start;
     position: relative;
 
+    &::before {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid black;
+        width: 100%;
+    }
+
     h2 {
         font-size: 3rem;
         letter-spacing: -.15rem;

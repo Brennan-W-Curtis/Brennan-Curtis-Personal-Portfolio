@@ -1,4 +1,13 @@
 .projectsSection {
+    padding: 2.5rem 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid black;
+        width: 100%;
+    }
 
     h2 {
         font-size: 3rem;
@@ -10,23 +19,33 @@
 
     .individualProject {
         display: flex;
+        justify-content: space-between;
         width: 100%;
+        margin: 4rem 0;
         position: relative;
 
-        .imageContainer {
+        .projectImage {
+            width: 30%;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 15rem;
-            height: 15rem;
-            overflow: hidden;
-            border-radius: 50%;
+            position: relative;
+
+            .imageContainer {
+                position: absolute;
+                width: 20rem;
+                height: 20rem;
+                top: -3rem;
+                overflow: hidden;
+                // border-radius: 50%;
+            }
+
         }
         
     }
     
     .projectDescription {
-        width: 50%;
+        width: 70%;
         display: flex;
         flex-wrap: wrap;
 
@@ -40,16 +59,18 @@
             font-size: .9rem;
             font-weight: 400;
             letter-spacing: .05rem;
+            margin: 0 0 1rem 0;
         }
 
         p {
             width: 100%;
+            margin: 0 0 1rem 0;
         }
 
     }
 
     .projectLinks {
-        width: 16.5%;
+        width: 20%;
         
         ul {
             display: flex;
@@ -61,11 +82,12 @@
             background-color: $backgroundColour;
             padding: .5rem 1rem;
             max-width: 4rem;
+            border-radius: .25rem;
             transition: all .5s;
 
             &:hover, 
             &:focus-within {
-                color: $primaryColour;
+                color: white;
                 background-color: black;
             }
 

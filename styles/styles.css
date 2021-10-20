@@ -255,6 +255,7 @@ img {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -322,6 +323,23 @@ header .brandLogo {
 header .brandLogo:hover, header .brandLogo:focus {
   color: #FA472A;
 }
+header .brandLogo:hover::after, header .brandLogo:focus::after {
+  content: ".";
+  color: black;
+  font-family: "futura-pt", sans-serif;
+  position: relative;
+  right: 0.7rem;
+  bottom: 0.57rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header .brandLogo::after {
+  content: ".";
+  color: #FA472A;
+  position: relative;
+  right: 0.75rem;
+  bottom: 0.6rem;
+}
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,16 +398,26 @@ header .headerContent .imageContainer {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
+header .sectionLinks {
+  position: fixed;
+  right: 1rem;
+}
+header .sectionLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
 .aboutSection {
   height: 55vh;
   position: relative;
-}
-.aboutSection::after {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid black;
-  width: 100%;
 }
 .aboutSection h2 {
   font-size: 3rem;
@@ -419,6 +447,13 @@ header .headerContent .imageContainer {
 .aboutSection .aboutContent .articleText p {
   margin: 0.5rem 0;
 }
+.aboutSection .aboutContent .articleLink {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.aboutSection .aboutContent .articleLink:hover, .aboutSection .aboutContent .articleLink:focus-within {
+  font-weight: 800;
+}
 .aboutSection .imageBackground {
   background-color: #F3F3F3;
   border: 1px solid black;
@@ -447,6 +482,12 @@ header .headerContent .imageContainer {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
+}
+.skillsSection::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid black;
+  width: 100%;
 }
 .skillsSection h2 {
   font-size: 3rem;
@@ -507,6 +548,16 @@ header .headerContent .imageContainer {
   font-size: 0.7rem;
 }
 
+.projectsSection {
+  padding: 2.5rem 0;
+  position: relative;
+}
+.projectsSection::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
 .projectsSection h2 {
   font-size: 3rem;
   letter-spacing: -0.15rem;
@@ -518,10 +569,15 @@ header .headerContent .imageContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
+  margin: 4rem 0;
   position: relative;
 }
-.projectsSection .individualProject .imageContainer {
+.projectsSection .individualProject .projectImage {
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,13 +587,17 @@ header .headerContent .imageContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 15rem;
-  height: 15rem;
+  position: relative;
+}
+.projectsSection .individualProject .projectImage .imageContainer {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  top: -3rem;
   overflow: hidden;
-  border-radius: 50%;
 }
 .projectsSection .projectDescription {
-  width: 50%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,12 +613,14 @@ header .headerContent .imageContainer {
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.05rem;
+  margin: 0 0 1rem 0;
 }
 .projectsSection .projectDescription p {
   width: 100%;
+  margin: 0 0 1rem 0;
 }
 .projectsSection .projectLinks {
-  width: 16.5%;
+  width: 20%;
 }
 .projectsSection .projectLinks ul {
   display: -webkit-box;
@@ -573,16 +635,24 @@ header .headerContent .imageContainer {
   background-color: #F3F3F3;
   padding: 0.5rem 1rem;
   max-width: 4rem;
+  border-radius: 0.25rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .projectsSection .projectLinks a:hover, .projectsSection .projectLinks a:focus-within {
-  color: #FA472A;
+  color: white;
   background-color: black;
 }
 
 .contactSection {
   height: 55vh;
+  position: relative;
+}
+.contactSection::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid black;
+  width: 100%;
 }
 .contactSection .contactHeadline h2 {
   font-size: 3rem;
@@ -620,7 +690,7 @@ header .headerContent .imageContainer {
   transition: all 0.5s;
 }
 .contactSection .contactContent .calendlyLink:hover, .contactSection .contactContent .calendlyLink:focus {
-  color: #FA472A;
+  color: white;
   background-color: black;
 }
 .contactSection .contactContent .contactForm {
@@ -637,8 +707,17 @@ header .headerContent .imageContainer {
   min-width: 10rem;
 }
 .contactSection .socialsList li {
-  min-width: 1rem;
-  min-height: 1rem;
+  max-width: 1rem;
+  max-height: 1rem;
+}
+.contactSection .socialsList .svgIcon {
+  fill: black;
+  max-width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.contactSection .socialsList .svgIcon:hover, .contactSection .socialsList .svgIcon:focus {
+  fill: #FA472A;
 }
 .contactSection form {
   display: -webkit-box;
@@ -682,8 +761,8 @@ header .headerContent .imageContainer {
   transition: all 0.5s;
 }
 .contactSection form button:hover, .contactSection form button:focus {
+  color: white;
   background-color: black;
-  color: #F3F3F3;
 }
 
 footer {
