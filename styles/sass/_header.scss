@@ -17,7 +17,7 @@ header {
 
     }
     
-    .headerNavigation {
+    .mainNavigation {
         height: 10vh;
         display: flex;
         justify-content: space-between;
@@ -39,6 +39,7 @@ header {
         font-size: 2rem;
         letter-spacing: -.05rem;
         transition: all .5s;
+        position: relative;
 
         &:hover,
         &:focus {
@@ -49,8 +50,8 @@ header {
                 color: black;
                 font-family: $primaryFont;
                 position: relative;
-                right: .7rem;
-                bottom: .57rem;
+                right: .73rem;
+                bottom: .59rem;
                 transition: all .5s;
             }
 
@@ -60,13 +61,13 @@ header {
             content: ".";
             color: $primaryColour;
             position: relative;
-            right: .75rem;
-            bottom: .6rem;
+            right: .77rem;
+            bottom: .59rem;
         }
 
     }
     
-    ul {
+    .desktopMenu {
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -136,6 +137,16 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        li {
+            transition: all .5s;
+            
+            &:hover,
+            &:focus-within {
+                color: $primaryColour;
+            }
+
         }
 
     }

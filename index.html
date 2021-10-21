@@ -8,20 +8,12 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>BWC. Portfolio</title>
 </head>
-<!-- Reminder: Substitute Calendly link for phone number on resume download -->
-<!-- Reminder: Write responsive media queries for all device sizes -->
-<!-- Reminder: Write body paragraph in about me section -->
-<!-- Reminder: Add spacing along the margins of the h2 elements to further separate them from section dividers -->
-<!-- Reminder: Need to add a conditional statement that changes which ternary statements to run in app.js depending on the viewport width -->
-<!-- Reminder: Setup a functioning form to receive emails -->
-<!-- Reminder: Deploy a live version of the portfolio to netlify -->
-<!-- Reminder: Purchase a domain name and connect it to live site -->
 <body>
     <header id="headerSection">
         <div class="wrapper">
-            <nav class="headerNavigation">
+            <nav class="mainNavigation">
                 <a href="index.html" class="brandLogo">BWC</a>
-                <ul>
+                <ul class="desktopMenu">
                     <li><a href="#aboutSection">About</a></li>
                     <li><a href="#skillsSection">Skills</a></li>
                     <li><a href="#projectsSection">Projects</a></li>
@@ -33,14 +25,13 @@
                     <h1>Brennan W<span>.</span> Curtis</h1>
                     <h3>Front-End Web Developer & Content Creator</h3>
                 </div>
-                
                 <div class="sectionLinks">
                     <nav>
                         <ul>
                             <li><a href="#headerSection" id="headerLink"><i class="far fa-circle" aria-hidden="true"></i></a></li>
                             <li><a href="#aboutSection" id="aboutLink"><i class="far fa-circle" aria-hidden="true"></i></a></li>
                             <li><a href="#skillsSection" id="skillsLink"><i class="far fa-circle" aria-hidden="true"></i></a></li>
-                            <li><a href="#projectsSections" id="projectsLink"><i class="far fa-circle" aria-hidden="true"></i></a></li>
+                            <li><a href="#projectsSection" id="projectsLink"><i class="far fa-circle" aria-hidden="true"></i></a></li>
                             <li><a href="#contactSection" id="contactLink"><i class="far fa-circle" aria-hidden="true"></i></a></li>
                         </ul>
                     </nav>
@@ -65,7 +56,7 @@
                         <h3>Brennan W<span>.</span> Curtis</h3>
                         <h4>Certificate in Web Development | Juno College of Technology</h4>
                         <p>Welcome, and thank you for visting my portfolio! My name is Brennan, and I'm a front-end web developer with an eye for design and a mind for creative problem solving.</p>
-                        <p>I'm a recent graduate of <span class="junoLink"><a href="https://junocollege.com/bootcamp/web-development" target="_blank">Juno College of Technology</a></span>'s Web Development Bootcamp.</p>
+                        <p>I'm a recent graduate of <span class="junoLink"><a href="https://junocollege.com/bootcamp/web-development" target="_blank">Juno College of Technology</a></span>'s Web Development Bootcamp as part of Cohort 36.</p>
                         <p>With a background in detail-oriented positions that require a creative approach I actively pursue opportunities that allow me to innovate and generate new solutions!</p>
                         <p>Check out my <span class="articleLink"><a href="https://www.linkedin.com/pulse/passionately-follow-steps-curiosity-brennan-w-curtis/?trackingId=ZFJKChLmS0Wb1rRXBadJtg%3D%3D" target="_blank">article</a></span> to learn more about how following my passions inspired my transition from finance to development!</p>
                         <p>On the rare occasion that I'm not coding, I love producing video content, creating new worlds in 3D software, and exploring the world of cinema.</p>
@@ -75,7 +66,7 @@
             </section>
             <section class="skillsSection" id="skillsSection">
                 <h2>Skills</h2>
-                <div>
+                <div class="skillsList">
                     <ul>
                         <li>
                             <div class="imageContainer">
@@ -142,6 +133,12 @@
                                 <img src="./assets/icons/skills/firebase-icon.svg" aria-hidden="true" alt="A Firebase icon">
                             </div>
                             <p>Firebase</p>
+                        </li>
+                        <li>
+                            <div class="imageContainer">
+                                <img src="./assets/icons/skills/netlify-brands.svg" aria-hidden="true" alt="A Netlify icon">
+                            </div>
+                            <p>Netlify</p>
                         </li>
                         <li>
                             <div class="imageContainer">
@@ -216,9 +213,6 @@
                                             <li>
                                                 <a href="https://brokenvowsfilm.com/" target="_blank">Live</a>
                                             </li>
-                                            <li>
-                                                <a href="#" target="_blank">Detail</a>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -240,10 +234,10 @@
                                     <div class="projectLinks">
                                         <ul>
                                             <li>
-                                                <a href="" target="_blank">Live</a>
+                                                <a href="https://extelligence.netlify.app/" target="_blank">Live</a>
                                             </li>
                                             <li>
-                                                <a href="" target="_blank">Repo</a>
+                                                <a href="https://github.com/Brennan-W-Curtis/Juno-College-Projects/tree/main/projectNo-4" target="_blank">Repo</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -262,7 +256,7 @@
                                 <div class="projectDescription">
                                     <h3>Covid-19 Tacker</h3>
                                     <h4>HTML5 | SCSS | JavaScript | RESTful API | Paired Programming</h4>
-                                    <p>A pair-programmed application which generates a current breakdown of global statistics to compare with a country based on the user's choice.</p>
+                                    <p>A pair-programmed application which generates a current breakdown of global statistics to compare with a country based upon the user's choice.</p>
                                     <div class="projectLinks">
                                         <ul>
                                             <li>
@@ -384,7 +378,7 @@
                         </div>
                     </div>
                     <div class="contactForm">
-                        <form action="">
+                        <form action="https://formspree.io/f/xzbyqvqq" method="POST">
                             <div class="formInput">
                                 <label for="userName" class="sr-only">Name</label>
                                 <input type="text" name="userName" id="userName" placeholder="Name">
@@ -393,6 +387,7 @@
                             </div>
                             <label for="userMessage" class="sr-only">Message</label>
                             <textarea name="userMessage" id="userMessage" placeholder="Currently I'm open to new opportunities in web development, so please don't hesitate to reach out!"></textarea>
+                            <div class="g-recaptcha" data-sitekey="6LeP_eUcAAAAANlll6QQLVOYmRzjV-jP2TONVwht"></div>
                             <button type="submit">Submit</button>
                         </form>
                     </div>
@@ -405,6 +400,5 @@
             <p>Designed and developed with passion by Brennan W<span>.</span> Curtis.</p>
         </div>
     </footer>
-    <script src="./scripts/app.js"></script>
 </body>
 </html>

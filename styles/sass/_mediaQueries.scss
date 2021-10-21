@@ -30,6 +30,29 @@
     
 }
 
+@media (max-width: 880px) {
+
+    .aboutSection {
+
+        .aboutContent {
+            flex-direction: column;
+            padding: 0;
+    
+            .articleText {
+                width: 90%;
+                margin: 0 auto;
+            }
+    
+            .imageBackground {
+                margin: 0 auto 1rem auto;
+            }
+    
+        }
+
+    }
+
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 
@@ -42,11 +65,14 @@
         .individualProject {
             flex-direction: column;
 
-            .imageContainer {
-                left: -5.5rem;
-                top: 0;
+            .projectImage {
+                width: 100%;
             }
 
+            .projectDescription {
+                width: 100%;    
+            }
+            
         }
 
     }
@@ -81,6 +107,52 @@
 
 }
 
+@media (max-width: 720px) {
+
+    header {
+
+        .desktopMenu {
+            // display: none;
+            width: 70%;
+        }
+
+    }
+
+    .projectsSection {
+        display: flex;
+        flex-wrap: wrap;
+
+        .individualProject {
+            margin: 2rem 0;
+        }
+
+        .projectImage {
+            display: flex;
+            align-self: center;
+            margin: 0 0 1rem 0;
+    
+            .imageContainer {
+                width: 15rem;
+                height: 10rem;
+            }
+
+        }
+
+        .projectDescription {
+            width: 100%;
+
+            p {
+                width: 97.5%;
+                font-size: 1rem;
+            }
+
+        }
+
+    }
+
+    
+}
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
@@ -89,12 +161,16 @@
         .headerContent {
     
             h1 {
-                font-size: 2.7rem;
+                font-size: 2.6rem;
             }
 
             h3 {
                 font-size: .65rem;
                 letter-spacing: .12rem;
+            }
+
+            .imageContainer {
+                width: 20%;
             }
     
         }
@@ -109,18 +185,7 @@
         }
 
         .aboutContent {
-            flex-direction: column;
             padding: 0;
-
-            .articleText {
-                width: 90%;
-                margin: 0 auto;
-            }
-
-            .imageBackground {
-                margin: 0 auto 1rem auto;
-            }
-
         }
 
     }
@@ -145,43 +210,6 @@
             margin: 2rem 0 0 0;
         }
 
-        .individualProject {
-            margin: 0;
-
-            .projectImage {
-                width: 100%;
-            }
-
-        }
-
-        .projectImage {
-            display: flex;
-            align-self: center;
-
-            .imageContainer {
-                position: relative;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: auto;
-            }
-
-        }
-
-        .projectDescription {
-            width: 100%;
-
-            p {
-                width: 97.5%;
-                font-size: 1rem;
-            }
-
-        }
-
-        .projectLinks {
-            width: 37.5%;
-        }
-
     }
 
     .contactSection {
@@ -190,6 +218,10 @@
 
             h2 {
                 font-size: 2.5rem;
+            }
+
+            .actionText {
+                width: 95%;
             }
 
         }

@@ -25,7 +25,7 @@ img {
 }
 
 html { 
-    font-size: 125%; 
+    font-size: calc(125% * .8); 
     scroll-behavior: smooth;
 }
 
