@@ -1,6 +1,7 @@
 .contactSection {
-    height: 55vh;
+    min-height: 55vh;
     position: relative;
+    margin-bottom: 2rem;
 
     &::before {
         content: "";
@@ -12,6 +13,7 @@
     .contactHeadline {
 
         h2 {
+            padding-top: 2rem;
             font-size: 3rem;
             letter-spacing: -.15rem;
             width: 100%;

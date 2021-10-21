@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>BWC. Portfolio</title>
 </head>
+<!-- Reminder: Substitute Calendly link for phone number on resume download -->
+<!-- Reminder: Write responsive media queries for all device sizes -->
+<!-- Reminder: Write body paragraph in about me section -->
+<!-- Reminder: Add spacing along the margins of the h2 elements to further separate them from section dividers -->
+<!-- Reminder: Need to add a conditional statement that changes which ternary statements to run in app.js depending on the viewport width -->
+<!-- Reminder: Setup a functioning form to receive emails -->
+<!-- Reminder: Deploy a live version of the portfolio to netlify -->
+<!-- Reminder: Purchase a domain name and connect it to live site -->
 <body>
     <header id="headerSection">
         <div class="wrapper">
@@ -21,10 +29,11 @@
                 </ul>
             </nav>
             <div class="headerContent">
-                <div class="headerHeadlines">
+                <div class="headerHeadings">
                     <h1>Brennan W<span>.</span> Curtis</h1>
                     <h3>Front-End Web Developer & Content Creator</h3>
                 </div>
+                
                 <div class="sectionLinks">
                     <nav>
                         <ul>
@@ -56,10 +65,11 @@
                         <h3>Brennan W<span>.</span> Curtis</h3>
                         <h4>Certificate in Web Development | Juno College of Technology</h4>
                         <p>Welcome, and thank you for visting my portfolio! My name is Brennan, and I'm a front-end web developer with an eye for design and a mind for creative problem solving.</p>
-                        <p></p>
+                        <p>I'm a recent graduate of <span class="junoLink"><a href="https://junocollege.com/bootcamp/web-development" target="_blank">Juno College of Technology</a></span>'s Web Development Bootcamp.</p>
+                        <p>With a background in detail-oriented positions that require a creative approach I actively pursue opportunities that allow me to innovate and generate new solutions!</p>
                         <p>Check out my <span class="articleLink"><a href="https://www.linkedin.com/pulse/passionately-follow-steps-curiosity-brennan-w-curtis/?trackingId=ZFJKChLmS0Wb1rRXBadJtg%3D%3D" target="_blank">article</a></span> to learn more about how following my passions inspired my transition from finance to development!</p>
                         <p>On the rare occasion that I'm not coding, I love producing video content, creating new worlds in 3D software, and exploring the world of cinema.</p>
-                        <a href="" download="Brennan-Curtis-Resume">Resume</a>
+                        <a href="./assets/downloads/Brennan-W-Curtis-Resume.pdf" class="resumeLink" download="Brennan-W-Curtis-Resume">Resume</a>
                     </div>
                 </article>
             </section>
@@ -161,7 +171,7 @@
                             <div class="imageContainer">
                                 <img src="./assets/icons/skills/github-brands.svg" aria-hidden="true" alt="A GitHub icon">
                             </div>
-                            <p>GitHub</p>
+                            <p>GitHub Collaboration</p>
                         </li>
                         <li>
                             <div class="imageContainer">
@@ -184,7 +194,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="projectsSection" id="projectsSections">
+            <section class="projectsSection" id="projectsSection">
                 <h2>Projects</h2>
                 <div class="projectContent">
                     <ul>
@@ -202,7 +212,14 @@
                                     <h4>Wordpress</h4>
                                     <p>A website and ecommerce platform for a multi award winning feature length documentary I built that provides users a glimpse into the production behind the film.</p>
                                     <div class="projectLinks">
-                                        <a href="https://brokenvowsfilm.com/" target="_blank">Live</a>
+                                        <ul>
+                                            <li>
+                                                <a href="https://brokenvowsfilm.com/" target="_blank">Live</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" target="_blank">Detail</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -385,7 +402,7 @@
     </main>
     <footer>
         <div class="wrapper">
-            <p>Designed and developed with passion by Brennan Curtis</p>
+            <p>Designed and developed with passion by Brennan W<span>.</span> Curtis.</p>
         </div>
     </footer>
     <script src="./scripts/app.js"></script>

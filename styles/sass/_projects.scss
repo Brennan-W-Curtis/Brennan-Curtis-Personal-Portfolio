@@ -1,5 +1,5 @@
 .projectsSection {
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 0 0;
     position: relative;
 
     &::before {
@@ -14,7 +14,7 @@
         letter-spacing: -.15rem;
         width: calc(100% - 2rem);
         text-align: center;
-        margin: 1rem;
+        margin: 2rem;
     }
 
     .individualProject {
@@ -29,19 +29,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-
-            .imageContainer {
-                position: absolute;
-                width: 20rem;
-                height: 20rem;
-                top: -3rem;
-                overflow: hidden;
-                // border-radius: 50%;
-            }
-
+            position: relative;    
         }
         
+        .imageContainer {
+            position: absolute;
+            width: 20rem;
+            height: 20rem;
+            top: -3rem;
+            overflow: hidden;
+        }
+           
     }
     
     .projectDescription {

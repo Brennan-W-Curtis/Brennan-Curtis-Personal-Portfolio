@@ -17,13 +17,14 @@
         letter-spacing: -.15rem;
         width: calc(100% - 2rem);
         text-align: center;
-        margin: 1rem;
+        margin: 2rem;
     }
 
     ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 2rem;
 
         li {
             display: flex;

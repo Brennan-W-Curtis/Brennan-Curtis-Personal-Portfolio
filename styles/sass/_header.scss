@@ -95,24 +95,23 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
 
-        .headerHeadlines {
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -.15rem;
+        }
+
+        h3 {
+            font-size: .9rem;
+            font-weight: 400;
+            letter-spacing: .15rem;
+        }
+
+        .headerHeadings {
             width: 100%;
 
             span {
                 color: $primaryColour;
-            }
-
-            h1 {
-                font-size: 3.5rem;
-                letter-spacing: -.15rem;
-            }
-    
-            h3 {
-                font-size: .9rem;
-                font-weight: 400;
-                letter-spacing: .15rem;
             }
 
         }
@@ -130,6 +129,8 @@ header {
     .sectionLinks {
         position: fixed;
         right: 1rem;
+        top: 30%;
+        z-index: 100;
 
         ul {
             display: flex;
