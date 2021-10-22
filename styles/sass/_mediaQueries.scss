@@ -237,15 +237,19 @@
 
         }
 
+        li {
+            &:focus-within {
+                color: $primaryColour;
+            }
+        }
+
         .fa-github,
         .fa-linkedin-in,
         .fa-twitter,
         .fa-youtube {
-            // color: red;
             transition: all .5s;
             
-            &:hover,
-            &:focus-within {
+            &:hover {
                 color: $primaryColour;
             }
 

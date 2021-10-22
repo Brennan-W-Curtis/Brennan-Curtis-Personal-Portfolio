@@ -1022,6 +1022,9 @@ footer span {
   .contactSection .contactHeadline .actionText {
     width: 95%;
   }
+  .contactSection li:focus-within {
+    color: #FA472A;
+  }
   .contactSection .fa-github,
 .contactSection .fa-linkedin-in,
 .contactSection .fa-twitter,
@@ -1029,13 +1032,10 @@ footer span {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
-  .contactSection .fa-github:hover, .contactSection .fa-github:focus-within,
+  .contactSection .fa-github:hover,
 .contactSection .fa-linkedin-in:hover,
-.contactSection .fa-linkedin-in:focus-within,
 .contactSection .fa-twitter:hover,
-.contactSection .fa-twitter:focus-within,
-.contactSection .fa-youtube:hover,
-.contactSection .fa-youtube:focus-within {
+.contactSection .fa-youtube:hover {
     color: #FA472A;
   }
 }
