@@ -668,7 +668,7 @@ header .sectionLinks li:hover, header .sectionLinks li:focus-within {
   letter-spacing: 0.05rem;
   margin: 0 0 1rem 0;
 }
-.projectsSection .individualProject .projectDescription p {
+.projectsSection .individualProject p {
   width: 80%;
   margin: 0 0 1rem 0;
 }
@@ -935,7 +935,7 @@ footer span {
 }
 @media (max-width: 720px) {
   header .desktopMenu {
-    width: 70%;
+    width: 50%;
   }
 
   .projectsSection {
@@ -970,6 +970,9 @@ footer span {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  header .desktopMenu {
+    display: none;
+  }
   header .headerContent h1 {
     font-size: 2.6rem;
   }
@@ -982,7 +985,7 @@ footer span {
   }
 
   .aboutSection {
-    min-height: 115vh;
+    min-height: 85vh;
   }
   .aboutSection h2 {
     font-size: 2.5rem;
@@ -1008,6 +1011,9 @@ footer span {
     width: calc(100% - 2rem);
     text-align: center;
     margin: 2rem 0 0 0;
+  }
+  .projectsSection .projectDescription p {
+    width: 95%;
   }
 
   .contactSection .contactHeadline h2 {
