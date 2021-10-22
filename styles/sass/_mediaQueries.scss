@@ -237,6 +237,20 @@
 
         }
 
+        .fa-github,
+        .fa-linkedin-in,
+        .fa-twitter,
+        .fa-youtube {
+            // color: red;
+            transition: all .5s;
+            
+            &:hover,
+            &:focus-within {
+                color: $primaryColour;
+            }
+
+        }
+
     }
 
 }
