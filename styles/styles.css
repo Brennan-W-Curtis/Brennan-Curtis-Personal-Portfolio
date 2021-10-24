@@ -805,6 +805,9 @@ header .sectionLinks li:hover, header .sectionLinks li:focus-within {
 .contactSection .socialsList .fa-youtube:hover {
   color: #FA472A;
 }
+.contactSection .contactForm {
+  margin: 0 0 0 auto;
+}
 .contactSection form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -908,7 +911,7 @@ footer span {
   }
 
   .contactSection .contactForm {
-    margin: 0 auto;
+    margin: 0 0 0 auto;
   }
 }
 @media (max-width: 880px) {
