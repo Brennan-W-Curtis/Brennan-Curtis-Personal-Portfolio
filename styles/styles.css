@@ -789,6 +789,9 @@ header .sectionLinks li:hover, header .sectionLinks li:focus-within {
   max-width: 1rem;
   max-height: 1rem;
 }
+.contactSection .socialsList li:focus-within {
+  color: #FA472A;
+}
 .contactSection .socialsList .fa-github,
 .contactSection .socialsList .fa-linkedin-in,
 .contactSection .socialsList .fa-twitter,

@@ -74,7 +74,12 @@
 
         li {
             max-width: 1rem;
-            max-height: 1rem;    
+            max-height: 1rem; 
+            
+            &:focus-within {
+                color: $primaryColour;
+            }
+            
         }
 
         .fa-github,
