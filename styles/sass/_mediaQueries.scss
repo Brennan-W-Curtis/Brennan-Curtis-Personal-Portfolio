@@ -27,6 +27,14 @@
         }
 
     }
+
+    .contactSection {
+
+        .contactForm {
+            margin: 0 auto;
+        }
+
+    }
     
 }
 
@@ -241,18 +249,6 @@
             &:focus-within {
                 color: $primaryColour;
             }
-        }
-
-        .fa-github,
-        .fa-linkedin-in,
-        .fa-twitter,
-        .fa-youtube {
-            transition: all .5s;
-            
-            &:hover {
-                color: $primaryColour;
-            }
-
         }
 
     }

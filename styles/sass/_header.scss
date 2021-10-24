@@ -79,6 +79,7 @@ header {
             a {
                 text-transform: uppercase;
                 font-size: .8rem;
+                letter-spacing: .05rem;
                 font-weight: 500;
             }
 
@@ -89,6 +90,29 @@ header {
             
         }
 
+    }
+
+    .desktopLink {
+        position: relative;
+    
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1.2rem;
+            width: 100%;
+            transform: scaleX(0);
+            border-bottom: 1px solid $primaryColour;
+            transition: all .5s;
+        }
+    
+        &:hover::after,
+        &:focus-within::after {
+            transform: scaleX(1);
+            transition: all .5s;
+        }
+    
     }
         
     .headerContent {

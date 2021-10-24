@@ -358,10 +358,33 @@ header .desktopMenu li {
 header .desktopMenu li a {
   text-transform: uppercase;
   font-size: 0.8rem;
+  letter-spacing: 0.05rem;
   font-weight: 500;
 }
 header .desktopMenu li:hover, header .desktopMenu li:focus-within {
   color: #FA472A;
+}
+header .desktopLink {
+  position: relative;
+}
+header .desktopLink::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  border-bottom: 1px solid #FA472A;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header .desktopLink:hover::after, header .desktopLink:focus-within::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 header .headerContent {
   height: 90vh;
@@ -725,7 +748,7 @@ header .sectionLinks li:hover, header .sectionLinks li:focus-within {
   display: flex;
 }
 .contactSection .contactContent .contactSocials {
-  width: 50%;
+  width: 30%;
   position: relative;
   top: 2rem;
 }
@@ -766,14 +789,18 @@ header .sectionLinks li:hover, header .sectionLinks li:focus-within {
   max-width: 1rem;
   max-height: 1rem;
 }
-.contactSection .socialsList .svgIcon {
-  fill: black;
-  max-width: 100%;
+.contactSection .socialsList .fa-github,
+.contactSection .socialsList .fa-linkedin-in,
+.contactSection .socialsList .fa-twitter,
+.contactSection .socialsList .fa-youtube {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-.contactSection .socialsList .svgIcon:hover, .contactSection .socialsList .svgIcon:focus {
-  fill: #FA472A;
+.contactSection .socialsList .fa-github:hover,
+.contactSection .socialsList .fa-linkedin-in:hover,
+.contactSection .socialsList .fa-twitter:hover,
+.contactSection .socialsList .fa-youtube:hover {
+  color: #FA472A;
 }
 .contactSection form {
   display: -webkit-box;
@@ -875,6 +902,10 @@ footer span {
     width: 65%;
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+
+  .contactSection .contactForm {
+    margin: 0 auto;
   }
 }
 @media (max-width: 880px) {
@@ -1023,19 +1054,6 @@ footer span {
     width: 95%;
   }
   .contactSection li:focus-within {
-    color: #FA472A;
-  }
-  .contactSection .fa-github,
-.contactSection .fa-linkedin-in,
-.contactSection .fa-twitter,
-.contactSection .fa-youtube {
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  .contactSection .fa-github:hover,
-.contactSection .fa-linkedin-in:hover,
-.contactSection .fa-twitter:hover,
-.contactSection .fa-youtube:hover {
     color: #FA472A;
   }
 }

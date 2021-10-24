@@ -30,7 +30,7 @@
         display: flex;
 
         .contactSocials {
-            width: 50%;
+            width: 30%;
             position: relative;
             top: 2rem;
 
@@ -77,17 +77,17 @@
             max-height: 1rem;    
         }
 
-        .svgIcon {
-            fill: black;
-            max-width: 100%;
+        .fa-github,
+        .fa-linkedin-in,
+        .fa-twitter,
+        .fa-youtube {
             transition: all .5s;
-
-            &:hover,
-            &:focus {
-                fill: $primaryColour;
+            
+            &:hover {
+                color: $primaryColour;
             }
 
-        } 
+        }
 
     }
     
