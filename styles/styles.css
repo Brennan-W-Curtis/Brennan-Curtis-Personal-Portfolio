@@ -376,7 +376,7 @@ header .desktopLink::after {
   width: 100%;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  border-bottom: 1px solid #FA472A;
+  border-bottom: 1px solid black;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -385,6 +385,7 @@ header .desktopLink:hover::after, header .desktopLink:focus-within::after {
           transform: scaleX(1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  border-bottom: 1px solid #FA472A;
 }
 header .headerContent {
   height: 90vh;
@@ -968,6 +969,7 @@ footer span {
   .contactSection .contactContent .contactSocials {
     top: 0;
     margin: 0 0 2rem 0;
+    max-width: 10rem;
   }
 }
 @media (max-width: 720px) {
